@@ -22,18 +22,18 @@ mod.
 [here](https://github.com/BepInEx/BepInEx/releases).
 - Find the Peaks of Yore game directory, this is most easily done by going to the game in steam,
   pressing the settings for the game (⚙️), selecting "Manage", then "Browse local files".
-- Extract the contents of BepInEx_win_x64_<version>.zip into your Peaks of Yore game directory.
-- You should now have "BepInEx", ".doorstop_version", "changelog.txt", "doorstop_config.ini", and "winhttp.dll"
-  in the same place as "Peaks of Yore_Data", "MonoBleedingEdge", "Peaks of Yore.exe", and "UnityPlayer.dll"
+- Extract the contents of `BepInEx_win_x64_<version>.zip` into your Peaks of Yore game directory.
+- You should now have files/directories such as `BepInEx` and `winhttp.dll`
+  in the same place as `Peaks of Yore.exe` and `UnityPlayer.dll`.
 - Start the game so BepInEx can generate other necessary files for modding.
 - Close the game.
 
 ## Brutal mode
 - Download the latest release
 [here](https://github.com/Kaden5480/poy-brutal-mode/releases).
-- The compressed zip will contain a "patchers" and "plugins" directory.
-- Copy the files in "patchers" to "BepInEx/patchers" in your game directory.
-- Copy the files in "plugins" to "BepInEx/plugins" in your game directory.
+- The compressed zip will contain a `patchers` and `plugins` directory.
+- Copy the files in `patchers` to `BepInEx/patchers` in your game directory.
+- Copy the files in `plugins` to `BepInEx/plugins` in your game directory.
 - If installed correctly, you can now start the game and "enjoy" brutal mode.
 
 
