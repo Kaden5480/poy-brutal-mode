@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Common.props"/>
+
+  <PropertyGroup>
+    <AssemblyName>BrutalModePlugin</AssemblyName>
+    <Description>A challenging Peaks of Yore mod (plugin)</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <OutputPath>../bin/plugin/debug/</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <OutputPath>../bin/plugin/release/</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>BrutalModePlugin</RootNamespace>
+  </PropertyGroup>
+
+  <!--
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp.dll">
+      <HintPath>$(GameLibPath)/Assembly-CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  -->
+
+  <ItemGroup>
+    <PackageReference Include="UnityEngine.Modules" Version="2019.4.36" PrivateAssets="all"/>
+  </ItemGroup>
+</Project>
+<!-- vim: set et sw=2 ts=2 ft=xml: -->

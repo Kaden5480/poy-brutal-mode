@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Common.props"/>
+
+  <PropertyGroup>
+    <AssemblyName>BrutalModePatcher</AssemblyName>
+    <Description>A challenging Peaks of Yore mod (patcher)</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <OutputPath>../bin/patcher/debug/</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <OutputPath>../bin/patcher/release/</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>BrutalModePatcher</RootNamespace>
+  </PropertyGroup>
+</Project>
+<!-- vim: set et sw=2 ts=2 ft=xml: -->
