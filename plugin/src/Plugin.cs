@@ -1,3 +1,5 @@
+#if BEPINEX
+
 using BepInEx;
 
 using UnityEngine;
@@ -6,6 +8,20 @@ using UnityEngine.SceneManagement;
 namespace BrutalModePlugin {
     [BepInPlugin("com.github.Kaden5480.poy-brutal-mode", "Brutal Mode", PluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin {
+
+#elif MELONLOADER
+
+using MelonLoader;
+
+using UnityEngine;
+
+[assembly: MelonInfo(typeof(BrutalModePlugin.Plugin), "BrutalModePlugin", "0.1.0", "Kaden5480")]
+[assembly: MelonGame("TraipseWare", "Peaks of Yore")]
+
+namespace BrutalModePlugin {
+    public class Plugin: MelonMod {
+
+#endif
         /**
          * <summary>
          * The new gravity value to use.
@@ -13,6 +29,7 @@ namespace BrutalModePlugin {
          */
         private Vector3 gravity = new Vector3(0, -9.8f * 1.5f, 0);
 
+#if BEPINEX
         /**
          * <summary>
          * Executes when the plugin is being loaded.
@@ -42,5 +59,22 @@ namespace BrutalModePlugin {
             // Update gravity
             Physics.gravity = this.gravity;
         }
+
+#elif MELONLOADER
+
+        /**
+         * <summary>
+         * Executes whenever a scene loads.
+         * </summary>
+         * <param name="buildIndex">The build index of the scene</param>
+         * <param name="sceneName">The name of the scene</param>
+         */
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName) {
+            // Update gravity
+            Physics.gravity = this.gravity;
+        }
+
+#endif
+
     }
 }

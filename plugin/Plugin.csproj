@@ -6,12 +6,8 @@
     <Description>A challenging Peaks of Yore mod (plugin)</Description>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <OutputPath>../bin/plugin/debug/</OutputPath>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <OutputPath>../bin/plugin/release/</OutputPath>
+  <PropertyGroup>
+    <OutputPath>../bin/plugin/$(Configuration.ToLower())/</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup>
