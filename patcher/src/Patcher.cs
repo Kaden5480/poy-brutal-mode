@@ -53,7 +53,6 @@ namespace HardModePatcher {
             updateInsts[index + 1].Operand = -50f * multiplier;
         }
 
-        // TODO: Drain crumbling holds faster
         /**
          * <summary>
          * Patches the rate at which crumbling holds disappear.
@@ -61,11 +60,21 @@ namespace HardModePatcher {
          * <param name="crumbling">The type definition for crumbling holds</param>
          */
         private static void PatchCrumblingHoldDrain(TypeDefinition crumbling) {
-            // Drain crumbling holds faster
-            // private float decreaseIncrement = 0.22f;
+            // How much faster crumbling holds should disappear
+            const float multiplier = 3f;
 
-            // Might be useful
-            // private float moveHandSpeed = 0.09f;
+            MethodDefinition ctor = crumbling.FindMethod(".ctor");
+            Collection<Instruction> insts = ctor.Body.Instructions;
+
+            // Drain crumbling holds faster
+            string[][] seq = {
+                new string[] { "ldarg.0" },
+                new string[] { "ldc.r4", "0.22" },
+                new string[] { "stfld", "System.Single CrumblingHoldRegular::decreaseIncrement" },
+            };
+
+            int index = Helper.FindSeq(insts, seq);
+            insts[index + 1].Operand = 0.22f * multiplier;
         }
 
         /**
@@ -249,7 +258,7 @@ namespace HardModePatcher {
 
             // Patching holds
             PatchCrimpDrain(main.GetType("MicroHolds"));
-            //PatchCrumblingHoldDrain(main.GetType("CrumblingHolds"));
+            PatchCrumblingHoldDrain(main.GetType("CrumblingHoldRegular"));
             PatchPitchDrain(main.GetType("ClimbingPitches"));
             PatchSloperDrag(main.GetType("SloperHold"));
 

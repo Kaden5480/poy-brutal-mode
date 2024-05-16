@@ -24,6 +24,7 @@ can make the gameplay significantly more challenging.
 The following tweaks are currently applied:
 - Gravity is 50% stronger
 - Crimp stamina drains 2x faster
+- Crumbling holds disappear 3x faster
 - Pitch hold stamina drains 4x faster
 - Ice pick stamina drains 4x faster
 - Ice picks have 10% more force because of the increased gravity
