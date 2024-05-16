@@ -10,7 +10,7 @@ mod.
 # Overview
 - [Installing](#installing)
     - [BepInEx](#bepinex)
-    - [Brutal mode](#Brutal mode)
+    - [Brutal mode](#brutal-mode)
 - [Building from source](#building)
     - [Dotnet](#dotnet-build)
     - [Visual Studio](#visual-studio-build)
