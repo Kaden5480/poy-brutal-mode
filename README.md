@@ -8,6 +8,7 @@ A challenging
 mod.
 
 # Overview
+- [Features](#features)
 - [Installing](#installing)
     - [BepInEx](#bepinex)
     - [Brutal mode](#brutal-mode)
@@ -15,6 +16,18 @@ mod.
     - [Dotnet](#dotnet-build)
     - [Visual Studio](#visual-studio-build)
     - [Custom game locations](#custom-game-locations)
+
+# Features
+This mod introduces some tweaks to the vanilla game mechanics which
+can make the gameplay significantly more challenging.
+
+The following tweaks are currently applied:
+- Gravity is 50% stronger
+- Crimp stamina drains 2x faster
+- Pitch hold stamina drains 4x faster
+- Ice pick stamina drains 4x faster
+- Ice picks have 10% more force because of the increased gravity
+- You slide down slopers significantly faster
 
 # Installing
 ## BepInEx
