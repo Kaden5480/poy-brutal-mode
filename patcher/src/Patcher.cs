@@ -162,7 +162,7 @@ namespace HardModePatcher {
                 new string[] { "ldarg.0" },
                 new string[] { "ldfld", "UnityEngine.Rigidbody SloperHold::stemPointRbL" },
                 new string[] { "ldc.r4", "75" },
-                new string[] { "callvirt", "System.Void UnityEngine::Rigidbody::set_drag(System.Single)" },
+                new string[] { "callvirt", "System.Void UnityEngine.Rigidbody::set_drag(System.Single)" },
             };
 
             int index = Helper.FindSeq(insts, seq);
@@ -176,7 +176,7 @@ namespace HardModePatcher {
                 new string[] { "ldarg.0" },
                 new string[] { "ldfld", "UnityEngine.Rigidbody SloperHold::stemPointRbR" },
                 new string[] { "ldc.r4", "75" },
-                new string[] { "callvirt", "System.Void UnityEngine::Rigidbody::set_drag(System.Single)" },
+                new string[] { "callvirt", "System.Void UnityEngine.Rigidbody::set_drag(System.Single)" },
             };
 
             index = Helper.FindSeq(insts, seq);
