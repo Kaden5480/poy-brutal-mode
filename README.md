@@ -28,7 +28,7 @@ The following tweaks are currently applied:
 - Crumbling holds disappear 3x faster
 - Pitch hold stamina drains 4x faster
 - Ice pick stamina drains 4x faster
-- Ice picks have 10% more force because of the increased gravity
+- Ice picks have 10% more force to be more usable with the increased gravity
 - You slide down slopers significantly faster
 
 # Installing
