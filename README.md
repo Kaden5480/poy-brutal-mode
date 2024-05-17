@@ -64,8 +64,9 @@ or by running `winget install Microsoft.DotNet.DesktopRuntime.6` in cmd/powershe
 ### MelonLoader
 - Download the latest nightly MelonLoader build
 [here](https://nightly.link/LavaGang/MelonLoader/workflows/build/alpha-development/MelonLoader.Windows.x64.CI.Release.zip).
-- Extract the contents of the downloaded zip file into your game directory, for example:<br>
-  `~/.local/share/Steam/steamapps/common/Peaks of Yore/`
+- Find the Peaks of Yore game directory, this is most easily done by going to the game in steam,
+  pressing the settings for the game (⚙️), selecting "Manage", then "Browse local files".
+- Extract the contents of the downloaded zip file into your game directory.
 - Run Peaks of Yore and then quit the game.
 - If MelonLoader was installed correctly, you should notice new directories
   in your game directory (such as Mods).
@@ -104,8 +105,9 @@ or by running `winget install Microsoft.DotNet.DesktopRuntime.6` in cmd/powershe
 ### MelonLoader
 - Download the latest nightly MelonLoader build
 [here](https://nightly.link/LavaGang/MelonLoader/workflows/build/alpha-development/MelonLoader.Windows.x64.CI.Release.zip).
-- Extract the contents of the downloaded zip file into your game directory, for example:<br>
-  `~/.local/share/Steam/steamapps/common/Peaks of Yore/`
+- Find the Peaks of Yore game directory, this is most easily done by going to the game in steam,
+  pressing the settings for the game (⚙️), selecting "Manage", then "Browse local files".
+- Extract the contents of the downloaded zip file into your game directory.
 - Run Peaks of Yore and then quit the game.
 - If MelonLoader was installed correctly, you should notice new directories
   in your game directory (such as Mods).
