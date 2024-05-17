@@ -74,7 +74,7 @@ or by running `winget install Microsoft.DotNet.DesktopRuntime.6` in cmd/powershe
 ### Brutal mode
 - Download the latest release
 [here](https://github.com/Kaden5480/poy-brutal-mode/releases).
-- The compressed zip file will contain a `Mods` and `Plugins` directory.
+- The compressed zip file will contain a `Mods`, `Plugins`, and `UserLibs` directory.
 - Copy the files from `Mods` to `Mods` in your game directory.
 - Copy the files from `Plugins` to `Plugins` in your game directory.
 - Copy the files from `UserLibs` to `UserLibs` in your game directory.
@@ -115,7 +115,7 @@ or by running `winget install Microsoft.DotNet.DesktopRuntime.6` in cmd/powershe
 ### Brutal mode
 - Download the latest release
 [here](https://github.com/Kaden5480/poy-brutal-mode/releases).
-- The compressed zip file will contain a `Mods` and `Plugins` directory.
+- The compressed zip file will contain a `Mods`, `Plugins`, and `UserLibs` directory.
 - Copy the files from `Mods` to `Mods` in your game directory.
 - Copy the files from `Plugins` to `Plugins` in your game directory.
 - Copy the files from `UserLibs` to `UserLibs` in your game directory.
