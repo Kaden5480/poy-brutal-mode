@@ -2,3 +2,4 @@
 bin
 **/obj
 GamePath.props
+build/BrutalMode-*
