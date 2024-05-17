@@ -76,6 +76,7 @@ or by running `winget install Microsoft.DotNet.DesktopRuntime.6` in cmd/powershe
 - The compressed zip file will contain a `Mods` and `Plugins` directory.
 - Copy the files from `Mods` to `MelonLoader/Mods` in your game directory.
 - Copy the files from `Plugins` to `MelonLoader/Plugins` in your game directory.
+- Copy the files from `UserLibs` to `MelonLoader/UserLibs` in your game directory.
 - If installed correctly, you can now start the game and "enjoy" brutal mode.
 
 ## MelonLoader (Linux)
@@ -115,6 +116,7 @@ or by running `winget install Microsoft.DotNet.DesktopRuntime.6` in cmd/powershe
 - The compressed zip file will contain a `Mods` and `Plugins` directory.
 - Copy the files from `Mods` to `MelonLoader/Mods` in your game directory.
 - Copy the files from `Plugins` to `MelonLoader/Plugins` in your game directory.
+- Copy the files from `UserLibs` to `MelonLoader/UserLibs` in your game directory.
 - If installed correctly, you can now start the game and "enjoy" brutal mode.
 
 # Building from source
