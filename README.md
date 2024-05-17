@@ -121,7 +121,7 @@ or by running `winget install Microsoft.DotNet.DesktopRuntime.6` in cmd/powershe
 
 # Building from source
 Whichever approach you use for building from source, the resulting
-patcher and plugin can be found in bin/
+patcher and plugin can be found in `bin/`.
 
 The following configurations are supported:
 - Debug-BepInEx
