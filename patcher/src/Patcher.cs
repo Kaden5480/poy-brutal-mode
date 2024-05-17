@@ -293,10 +293,10 @@ namespace BrutalModePatcher {
 
             Patch(assembly);
 
-            assembly.Write("MelonLoader/Managed/Assembly-CSharp-patched.dll");
+            assembly.Write("MelonLoader/Managed/BrutalMode-Assembly-CSharp.dll");
             assembly.Dispose();
 
-            Assembly.LoadFile("MelonLoader/Managed/Assembly-CSharp-patched.dll");
+            Assembly.LoadFile("MelonLoader/Managed/BrutalMode-Assembly-CSharp.dll");
         }
 #endif
     }
