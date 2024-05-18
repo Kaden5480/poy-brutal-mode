@@ -4,9 +4,11 @@ set -xe
 
 cd ../
 
-VERSION="$(git describe --tags | tr -d  "v")"
-BP_DIR="build/BrutalMode-$VERSION-BepInEx"
-ML_DIR="build/BrutalMode-$VERSION-MelonLoader"
+VERSION="$(git describe --abbrev=0 | tr -d  "v")"
+BP_NAME="BrutalMode-$VERSION-BepInEx"
+ML_NAME="BrutalMode-$VERSION-MelonLoader"
+BP_DIR="build/$BP_NAME"
+ML_DIR="build/$ML_NAME"
 
 
 dotnet build -c Release-BepInEx
@@ -31,6 +33,13 @@ cp bin/patcher/release-melonloader/net472/libs/{Mono.Cecil,MonoMod.Utils}.dll \
 chmod -x "$ML_DIR"/UserLibs/*.dll
 
 # Zip everything
-cd build/
-zip -r "BrutalMode-$VERSION-BepInEx.zip" "BrutalMode-$VERSION-BepInEx"
-zip -r "BrutalMode-$VERSION-MelonLoader.zip" "BrutalMode-$VERSION-MelonLoader"
+pushd "$BP_DIR"
+zip -r ../"$BP_NAME.zip" .
+popd
+
+pushd "$ML_DIR"
+zip -r ../"$ML_NAME.zip" .
+popd
+
+# Remove directories
+rm -rf "$BP_DIR" "$ML_DIR"
