@@ -3,6 +3,7 @@
     <TargetFramework>net472</TargetFramework>
     <Version>0.1.0</Version>
     <Platform>Any CPU</Platform>
+    <Configurations>Debug-BepInEx;Release-BepInEx;Debug-MelonLoader;Release-MelonLoader</Configurations>
     <Configuration Condition="'$(Configuration)' == ''">Debug-BepInEx</Configuration>
     <IntermediateOutputPath>obj/$(Configuration)</IntermediateOutputPath>
   </PropertyGroup>
