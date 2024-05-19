@@ -22,6 +22,7 @@ cp bin/patcher/release-bepinex/net472/*.dll \
     "$BP_DIR/patchers/"
 cp bin/plugin/release-bepinex/net472/*.dll \
     "$BP_DIR/plugins/"
+cp build/README-BepInEx.txt "$BP_DIR"
 
 # MelonLoader
 cp bin/plugin/release-melonloader/net472/*.dll \
@@ -31,6 +32,7 @@ cp bin/patcher/release-melonloader/net472/*.dll \
 cp bin/patcher/release-melonloader/net472/libs/{Mono.Cecil,MonoMod.Utils}.dll \
     "$ML_DIR/UserLibs/"
 chmod -x "$ML_DIR"/UserLibs/*.dll
+cp build/README-MelonLoader.txt "$ML_DIR"
 
 # Zip everything
 pushd "$BP_DIR"
