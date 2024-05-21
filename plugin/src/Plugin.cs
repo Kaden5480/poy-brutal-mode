@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace BrutalModePlugin {
-    [BepInPlugin("com.github.Kaden5480.poy-brutal-mode", "Brutal Mode", PluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin("com.github.Kaden5480.poy-brutal-mode", "BrutalModePlugin", PluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin {
 
 #elif MELONLOADER
@@ -15,7 +15,7 @@ using MelonLoader;
 
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(BrutalModePlugin.Plugin), "BrutalModePlugin", "0.1.0", "Kaden5480")]
+[assembly: MelonInfo(typeof(BrutalModePlugin.Plugin), "BrutalModePlugin", "0.2.0", "Kaden5480")]
 [assembly: MelonGame("TraipseWare", "Peaks of Yore")]
 
 namespace BrutalModePlugin {
