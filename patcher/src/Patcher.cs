@@ -5,21 +5,7 @@ using Mono.Cecil.Cil;
 using Mono.Collections.Generic;
 using MonoMod.Utils;
 
-#if MELONLOADER
-
-using System.Reflection;
-
-using MelonLoader;
-
-[assembly: MelonInfo(typeof(BrutalModePatcher.Patcher), "BrutalModePatcher", "0.1.0", "Kaden5480")]
-[assembly: MelonGame("TraipseWare", "Peaks of Yore")]
-
-#endif
-
 namespace BrutalModePatcher {
-
-#if BEPINEX
-
     public static class Patcher {
         /**
          * <summary>
@@ -29,12 +15,6 @@ namespace BrutalModePatcher {
         public static IEnumerable<string> TargetDLLs { get; } = new string[] {
             "Assembly-CSharp.dll",
         };
-
-#elif MELONLOADER
-
-    public class Patcher : MelonPlugin {
-
-#endif
 
         /**
          * <summary>
@@ -286,18 +266,5 @@ namespace BrutalModePatcher {
             PatchIcePickDrain(main.GetType("IceAxe"));
             PatchIcePickForce(main.GetType("IceAxe"));
         }
-
-#if MELONLOADER
-        public override void OnPreInitialization() {
-            AssemblyDefinition assembly = AssemblyDefinition.ReadAssembly("./Peaks of Yore_Data/Managed/Assembly-CSharp.dll");
-
-            Patch(assembly);
-
-            assembly.Write("MelonLoader/Managed/BrutalMode-Assembly-CSharp.dll");
-            assembly.Dispose();
-
-            Assembly.LoadFile("MelonLoader/Managed/BrutalMode-Assembly-CSharp.dll");
-        }
-#endif
     }
 }

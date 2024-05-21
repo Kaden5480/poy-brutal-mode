@@ -15,7 +15,7 @@ dotnet build -c Release-BepInEx
 dotnet build -c Release-MelonLoader
 
 mkdir -p "$BP_DIR"/{patchers,plugins}
-mkdir -p "$ML_DIR"/{Mods,Plugins,UserLibs}
+mkdir -p "$ML_DIR"/{Mods,Plugins}
 
 # BepInEx
 cp bin/patcher/release-bepinex/net472/*.dll \
@@ -29,9 +29,6 @@ cp bin/plugin/release-melonloader/net472/*.dll \
     "$ML_DIR/Mods/"
 cp bin/patcher/release-melonloader/net472/*.dll \
     "$ML_DIR/Plugins/"
-cp bin/patcher/release-melonloader/net472/libs/{Mono.Cecil,MonoMod.Utils}.dll \
-    "$ML_DIR/UserLibs/"
-chmod -x "$ML_DIR"/UserLibs/*.dll
 cp build/README-MelonLoader.txt "$ML_DIR/README.txt"
 
 # Zip everything
