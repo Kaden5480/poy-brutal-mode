@@ -236,18 +236,26 @@ namespace BrutalMode {
                 );
 
                 // Extra value for both hands (pitch)
-                replaced = Helper.Replace(replaced,
-                    new[] {
-                        new CodeInstruction(OpCodes.Ldc_R4, Defaults.pitchDrainBothPitch),
-                        new CodeInstruction(OpCodes.Stloc_0),
-                    },
-                    new[] {
-                        new CodeInstruction(OpCodes.Ldc_R4, Injects.pitchDrainBothPitch),
-                        new CodeInstruction(OpCodes.Stloc_0),
-                    }
-                );
+                CodeInstruction buf = null;
 
-                foreach (CodeInstruction replace in replaced) {
+                foreach (var replace in replaced) {
+                    if (buf == null) {
+                        if (replace.LoadsConstant(Defaults.pitchDrainBothPitch) == true) {
+                            buf = replace;
+                            continue;
+                        }
+
+                        yield return replace;
+                        continue;
+                    }
+
+                    // Buf exists, check if it is stored to 0
+                    if (replace.opcode == OpCodes.Stloc_0) {
+                        buf.operand = Injects.pitchDrainBothPitch;
+                    }
+
+                    yield return buf;
+                    buf = null;
                     yield return replace;
                 }
             }
