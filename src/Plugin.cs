@@ -196,6 +196,7 @@ namespace BrutalMode {
 
                 IEnumerable<CodeInstruction> replaced = insts;
 
+                // Drain amounts
                 foreach (FieldInfo field in new[] { drainAmountL, drainAmountR }) {
                     // Chalk
                     replaced = Helper.Replace(replaced,
@@ -221,6 +222,30 @@ namespace BrutalMode {
                         }
                     );
                 }
+
+                // Extra value for both hands (pinch)
+                replaced = Helper.Replace(replaced,
+                    new[] {
+                        new CodeInstruction(OpCodes.Ldc_R4, Defaults.pitchDrainBothPinch),
+                        new CodeInstruction(OpCodes.Stloc_0),
+                    },
+                    new[] {
+                        new CodeInstruction(OpCodes.Ldc_R4, Injects.pitchDrainBothPinch),
+                        new CodeInstruction(OpCodes.Stloc_0),
+                    }
+                );
+
+                // Extra value for both hands (pitch)
+                replaced = Helper.Replace(replaced,
+                    new[] {
+                        new CodeInstruction(OpCodes.Ldc_R4, Defaults.pitchDrainBothPitch),
+                        new CodeInstruction(OpCodes.Stloc_0),
+                    },
+                    new[] {
+                        new CodeInstruction(OpCodes.Ldc_R4, Injects.pitchDrainBothPitch),
+                        new CodeInstruction(OpCodes.Stloc_0),
+                    }
+                );
 
                 foreach (CodeInstruction replace in replaced) {
                     yield return replace;

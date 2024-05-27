@@ -19,6 +19,8 @@ namespace BrutalMode {
         // Pitches
         public static float pitchDrainChalk        { get; } = 0.75f;
         public static float pitchDrainNoChalk      { get; } = 1f;
+        public static float pitchDrainBothPinch    { get; } = 2.5f;
+        public static float pitchDrainBothPitch    { get; } = 1f;
 
         // Slopers
         public static float sloperDragA            { get; } = 75f;
@@ -48,8 +50,10 @@ namespace BrutalMode {
         public static float crimpDrainExtreme      = Defaults.crimpDrainExtreme * 2f;
 
         // Pitch stamina drains 4x faster
-        public static float pitchDrainChalk        = Defaults.pitchDrainChalk * 4f;
-        public static float pitchDrainNoChalk      = Defaults.pitchDrainNoChalk * 4f;
+        public static float pitchDrainChalk        = Defaults.pitchDrainChalk     * 4f;
+        public static float pitchDrainNoChalk      = Defaults.pitchDrainNoChalk   * 4f;
+        public static float pitchDrainBothPinch    = Defaults.pitchDrainBothPinch * 4f;
+        public static float pitchDrainBothPitch    = Defaults.pitchDrainBothPitch * 4f;
 
         // Crumbling holds drain 3x faster
         public static float crumblingHoldDecrement = Defaults.crumblingHoldDecrement * 3f;
