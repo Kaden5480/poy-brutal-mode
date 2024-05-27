@@ -62,7 +62,7 @@ namespace BrutalMode {
 #endif
 
         private void PatchGravity() {
-            Physics.gravity = this.gravity;
+            Physics.gravity = Injects.gravity;
         }
     }
 }
