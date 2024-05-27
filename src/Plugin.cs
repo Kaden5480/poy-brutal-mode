@@ -134,6 +134,7 @@ namespace BrutalMode {
                         new CodeInstruction(OpCodes.Stfld, gripDecrementExtremeValue),
                     }
                 );
+
                 foreach (CodeInstruction replace in replaced) {
                     yield return replace;
                 }
