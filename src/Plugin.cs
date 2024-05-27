@@ -226,7 +226,7 @@ namespace BrutalMode {
                 IEnumerable<CodeInstruction> insts
             ) {
                 FieldInfo gripDecrementValue = AccessTools.Field(
-                    tyepof(IceAxe), "gripDecrementValue"
+                    typeof(IceAxe), "gripDecrementValue"
                 );
 
                 IEnumerable<CodeInstruction> replaced = Helper.Replace(insts,
