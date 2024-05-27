@@ -90,7 +90,7 @@ namespace BrutalMode {
                 IEnumerable<CodeInstruction> insts
             ) {
                 FieldInfo gripDecrementValue = AccessTools.Field(
-                    typeof(MicroHolds), nameof("gripDecrementValue")
+                    typeof(MicroHolds), "gripDecrementValue"
                 );
 
                 IEnumerable<CodeInstruction> replaced = Helper.Replace(insts,
@@ -121,7 +121,7 @@ namespace BrutalMode {
                 IEnumerable<CodeInstruction> insts
             ) {
                 FieldInfo gripDecrementExtremeValue = AccessTools.Field(
-                    typeof(MicroHolds), nameof("gripDecrementExtremeValue")
+                    typeof(MicroHolds), "gripDecrementExtremeValue"
                 );
 
                 IEnumerable<CodeInstruction> replaced = Helper.Replace(insts,
