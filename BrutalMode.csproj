@@ -3,7 +3,7 @@
     <TargetFramework>net472</TargetFramework>
     <Platform>Any CPU</Platform>
     <AssemblyName>BrutalMode</AssemblyName>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Description>A challenging Peaks of Yore mod</Description>
     <RootNamespace>BrutalMode</RootNamespace>
     <Configurations>Debug-BepInEx;Release-BepInEx;Debug-MelonLoader;Release-MelonLoader</Configurations>

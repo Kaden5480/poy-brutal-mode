@@ -55,7 +55,7 @@ namespace BrutalMode {
 #elif MELONLOADER
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(BrutalMode.Plugin), "Brutal Mode", "0.2.0", "Kaden5480")]
+[assembly: MelonInfo(typeof(BrutalMode.Plugin), "Brutal Mode", "0.3.0", "Kaden5480")]
 [assembly: MelonGame("TraipseWare", "Peaks of Yore")]
 
 namespace BrutalMode {
