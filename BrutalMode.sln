@@ -1,10 +1,9 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patcher", "patcher\Patcher.csproj", "{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin", "plugin\Plugin.csproj", "{C3A277F2-E4FF-4153-97D0-40A672372EBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrutalMode", "BrutalMode.csproj", "{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,21 +16,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Debug-BepInEx|Any CPU.ActiveCfg = Debug-BepInEx|Any CPU
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Debug-BepInEx|Any CPU.Build.0 = Debug-BepInEx|Any CPU
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Release-BepInEx|Any CPU.ActiveCfg = Release-BepInEx|Any CPU
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Release-BepInEx|Any CPU.Build.0 = Release-BepInEx|Any CPU
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Debug-MelonLoader|Any CPU.ActiveCfg = Debug-MelonLoader|Any CPU
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Debug-MelonLoader|Any CPU.Build.0 = Debug-MelonLoader|Any CPU
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Release-MelonLoader|Any CPU.ActiveCfg = Release-MelonLoader|Any CPU
-		{6BFBF890-AB4B-4A8E-9701-AE7E8158A90A}.Release-MelonLoader|Any CPU.Build.0 = Release-MelonLoader|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Debug-BepInEx|Any CPU.ActiveCfg = Debug-BepInEx|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Debug-BepInEx|Any CPU.Build.0 = Debug-BepInEx|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Release-BepInEx|Any CPU.ActiveCfg = Release-BepInEx|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Release-BepInEx|Any CPU.Build.0 = Release-BepInEx|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Debug-MelonLoader|Any CPU.ActiveCfg = Debug-MelonLoader|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Debug-MelonLoader|Any CPU.Build.0 = Debug-MelonLoader|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Release-MelonLoader|Any CPU.ActiveCfg = Release-MelonLoader|Any CPU
-		{C3A277F2-E4FF-4153-97D0-40A672372EBB}.Release-MelonLoader|Any CPU.Build.0 = Release-MelonLoader|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Debug-BepInEx|Any CPU.ActiveCfg = Debug-BepInEx|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Debug-BepInEx|Any CPU.Build.0 = Debug-BepInEx|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Release-BepInEx|Any CPU.ActiveCfg = Release-BepInEx|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Release-BepInEx|Any CPU.Build.0 = Release-BepInEx|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Debug-MelonLoader|Any CPU.ActiveCfg = Debug-MelonLoader|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Debug-MelonLoader|Any CPU.Build.0 = Debug-MelonLoader|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Release-MelonLoader|Any CPU.ActiveCfg = Release-MelonLoader|Any CPU
+		{8E510BAA-AFDB-4DF5-AA94-50B64E030B14}.Release-MelonLoader|Any CPU.Build.0 = Release-MelonLoader|Any CPU
 	EndGlobalSection
 EndGlobal
