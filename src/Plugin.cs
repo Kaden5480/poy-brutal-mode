@@ -193,7 +193,7 @@ namespace BrutalMode {
                     float def = (float) typeof(Defaults).GetProperty($"sloperDrag{c}")
                         .GetValue(null);
 
-                    float inject = (float) typeof(Injects).GetProperty($"sloperDrag{c}")
+                    float inject = (float) typeof(Injects).GetField($"sloperDrag{c}")
                         .GetValue(null);
 
                     replaced = Helper.Replace(replaced,
