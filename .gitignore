@@ -1,5 +1,5 @@
 .vs
 bin
-**/obj
+obj
+build/*.zip
 GamePath.props
-build/BrutalMode-*

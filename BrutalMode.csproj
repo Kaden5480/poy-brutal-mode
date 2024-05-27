@@ -1,11 +1,15 @@
-<Project>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
-    <Version>0.2.0</Version>
     <Platform>Any CPU</Platform>
+    <AssemblyName>BrutalMode</AssemblyName>
+    <Version>0.2.0</Version>
+    <Description>A challenging Peaks of Yore mod</Description>
+    <RootNamespace>BrutalMode</RootNamespace>
     <Configurations>Debug-BepInEx;Release-BepInEx;Debug-MelonLoader;Release-MelonLoader</Configurations>
     <Configuration Condition="'$(Configuration)' == ''">Debug-BepInEx</Configuration>
     <IntermediateOutputPath>obj/$(Configuration)</IntermediateOutputPath>
+    <OutputPath>bin/$(Configuration.ToLower())/</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(Configuration.StartsWith('Debug-'))">
@@ -28,7 +32,6 @@
     <DefineConstants>MELONLOADER</DefineConstants>
   </PropertyGroup>
 
-  <!--
   <Import Condition="Exists('GamePath.props')" Project="GamePath.props"/>
 
   <PropertyGroup Condition="'$(GamePath)' == ''">
@@ -39,7 +42,12 @@
   <PropertyGroup>
     <GameLibPath>$(GamePath)/Peaks of Yore_Data/Managed</GameLibPath>
   </PropertyGroup>
-  -->
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp.dll">
+      <HintPath>$(GameLibPath)/Assembly-CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
   <ItemGroup Condition="$(Configuration.EndsWith('-BepInEx'))">
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all"/>
@@ -49,7 +57,11 @@
 
   <ItemGroup Condition="$(Configuration.EndsWith('-MelonLoader'))">
     <PackageReference Include="LavaGang.MelonLoader" Version="0.6.1"/>
-    <PackageReference Include="MonoMod.Utils" Version="22.5.1.1"/>
+    <PackageReference Include="Lib.Harmony" Version="2.3.3"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnityEngine.Modules" Version="2019.4.36" PrivateAssets="all"/>
   </ItemGroup>
 
   <ItemGroup Condition="'$(OS)' == 'Unix'">
@@ -64,5 +76,6 @@
         DestinationSubDirectory="libs/"/>
     </ItemGroup>
   </Target>
+
 </Project>
 <!-- vim: set et sw=2 ts=2 ft=xml: -->

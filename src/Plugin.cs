@@ -5,8 +5,8 @@ using BepInEx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BrutalModePlugin {
-    [BepInPlugin("com.github.Kaden5480.poy-brutal-mode", "BrutalModePlugin", PluginInfo.PLUGIN_VERSION)]
+namespace BrutalMode {
+    [BepInPlugin("com.github.Kaden5480.poy-brutal-mode", "Brutal Mode", PluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin {
 
 #elif MELONLOADER
@@ -15,10 +15,10 @@ using MelonLoader;
 
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(BrutalModePlugin.Plugin), "BrutalModePlugin", "0.2.0", "Kaden5480")]
+[assembly: MelonInfo(typeof(BrutalMode.Plugin), "Brutal Mode", "0.2.0", "Kaden5480")]
 [assembly: MelonGame("TraipseWare", "Peaks of Yore")]
 
-namespace BrutalModePlugin {
+namespace BrutalMode {
     public class Plugin: MelonMod {
 
 #endif
@@ -30,6 +30,7 @@ namespace BrutalModePlugin {
         private Vector3 gravity = new Vector3(0, -9.8f * 1.5f, 0);
 
 #if BEPINEX
+
         /**
          * <summary>
          * Executes when the plugin is being loaded.
