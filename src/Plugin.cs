@@ -25,6 +25,7 @@ namespace BrutalMode {
             Harmony.CreateAndPatchAll(typeof(PatchCrimpDrainRegular));
             Harmony.CreateAndPatchAll(typeof(PatchCrimpDrainExtreme));
             Harmony.CreateAndPatchAll(typeof(PatchCrumblingHoldDrain));
+            Harmony.CreateAndPatchAll(typeof(PatchPitchDrain));
             Harmony.CreateAndPatchAll(typeof(PatchSloperDrag));
             Harmony.CreateAndPatchAll(typeof(PatchIcePickDrain));
             Harmony.CreateAndPatchAll(typeof(PatchIcePickForce));
@@ -168,6 +169,58 @@ namespace BrutalMode {
                         new CodeInstruction(OpCodes.Stfld, decreaseIncrement),
                     }
                 );
+
+                foreach (CodeInstruction replace in replaced) {
+                    yield return replace;
+                }
+            }
+        }
+
+        /**
+         * <summary>
+         * Patches pitch hold stamina drain.
+         * </summary>
+         */
+        [HarmonyPatch(typeof(ClimbingPitches), "Update")]
+        static class PatchPitchDrain {
+            static IEnumerable<CodeInstruction> Transpiler(
+                IEnumerable<CodeInstruction> insts
+            ) {
+                FieldInfo drainAmountL = AccessTools.Field(
+                    typeof(ClimbingPitches), "drainAmountL"
+                );
+
+                FieldInfo drainAmountR = AccessTools.Field(
+                    typeof(ClimbingPitches), "drainAmountR"
+                );
+
+                IEnumerable<CodeInstruction> replaced = insts;
+
+                foreach (FieldInfo field in new[] { drainAmountL, drainAmountR }) {
+                    // Chalk
+                    replaced = Helper.Replace(replaced,
+                        new [] {
+                            new CodeInstruction(OpCodes.Ldc_R4, Defaults.pitchDrainChalk),
+                            new CodeInstruction(OpCodes.Stfld, field),
+                        },
+                        new [] {
+                            new CodeInstruction(OpCodes.Ldc_R4, Injects.pitchDrainChalk),
+                            new CodeInstruction(OpCodes.Stfld, field),
+                        }
+                    );
+
+                    // No chalk
+                    replaced = Helper.Replace(replaced,
+                        new [] {
+                            new CodeInstruction(OpCodes.Ldc_R4, Defaults.pitchDrainNoChalk),
+                            new CodeInstruction(OpCodes.Stfld, field),
+                        },
+                        new [] {
+                            new CodeInstruction(OpCodes.Ldc_R4, Injects.pitchDrainNoChalk),
+                            new CodeInstruction(OpCodes.Stfld, field),
+                        }
+                    );
+                }
 
                 foreach (CodeInstruction replace in replaced) {
                     yield return replace;

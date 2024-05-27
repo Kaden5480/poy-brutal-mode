@@ -8,16 +8,19 @@ namespace BrutalMode {
      */
     public static class Defaults {
         public static Vector3 gravity              { get; } = new Vector3(0, -9.8f, 0);
+
+        // Crimps
         public static float crimpDrain             { get; } = 25f;
         public static float crimpDrainExtreme      { get; } = -50f;
+
+        // Crumbling holds
         public static float crumblingHoldDecrement { get; } = 0.22f;
 
-        // Need to check
-        public static float pitchDrainOneChalk     { get; } = 1f;
-        public static float pitchDrainOneNoChalk   { get; } = 0.75f;
-        public static float pitchDrainBothChalk    { get; } = 2.5f;
-        public static float pitchDrainBothNoChalk  { get; } = 1f;
+        // Pitches
+        public static float pitchDrainChalk        { get; } = 0.75f;
+        public static float pitchDrainNoChalk      { get; } = 1f;
 
+        // Slopers
         public static float sloperDragA            { get; } = 75f;
         public static float sloperDragB            { get; } = 62f;
         public static float sloperDragC            { get; } = 35f;
@@ -25,6 +28,7 @@ namespace BrutalMode {
         public static float sloperDragE            { get; } = 5f;
         public static float sloperDragF            { get; } = 1.5f;
 
+        // Ice picks
         public static float icePickDrain           { get; } = 3.5f;
         public static float icePickForceOne        { get; } = 8.2f;
         public static float icePickForceBoth       { get; } = 5.2f;
@@ -42,6 +46,10 @@ namespace BrutalMode {
         // Crimp stamina drains 2x faster
         public static float crimpDrain             = Defaults.crimpDrain        * 2f;
         public static float crimpDrainExtreme      = Defaults.crimpDrainExtreme * 2f;
+
+        // Pitch stamina drains 4x faster
+        public static float pitchDrainChalk        = Defaults.pitchDrainChalk * 4f;
+        public static float pitchDrainNoChalk      = Defaults.pitchDrainNoChalk * 4f;
 
         // Crumbling holds drain 3x faster
         public static float crumblingHoldDecrement = Defaults.crumblingHoldDecrement * 3f;
