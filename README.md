@@ -3,6 +3,8 @@
 ![Open issues](https://img.shields.io/github/issues/Kaden5480/poy-brutal-mode?color=d65c5c)
 ![License](https://img.shields.io/github/license/Kaden5480/poy-brutal-mode?color=a35cd6)
 
+Archived because there is a similar functionality provided by the Peaks of Yore DLC.
+
 A challenging
 [Peaks of Yore](https://store.steampowered.com/app/2236070/)
 mod.
